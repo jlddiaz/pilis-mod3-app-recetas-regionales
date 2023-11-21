@@ -1,4 +1,19 @@
+import FormRecipe from '../../components/FormRecipe/FormRecipe'
+
 const RecipeCreation = () => {
-    return <h1>Formulario</h1>
+  const initialStateRecipe = {
+    id:'',
+    name: '',
+    description: '',
+    image: '',
+    ingredients: '',
+    preparation: '',
+    preparation_time: '',
+  }
+  return (
+    <div className="form-container">
+      <FormRecipe recipe={initialStateRecipe} isUpdate={false} />
+    </div>
+  )
 }
 export default RecipeCreation
