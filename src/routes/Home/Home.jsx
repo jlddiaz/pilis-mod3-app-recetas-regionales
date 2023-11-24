@@ -34,13 +34,15 @@ const Home = () => {
   return (
     <div className="main-container">
       <header className="header">
+        <label htmlFor="receta">Buscar</label>
         <input
+          name="receta"
+          id='receta'
           type="text"
           onChange={searcher}
           value={search}
           placeholder="Buscar Receta"
         />
-
         <Link className="nav-link" to="/recipe/create">
           Nueva Receta
         </Link>

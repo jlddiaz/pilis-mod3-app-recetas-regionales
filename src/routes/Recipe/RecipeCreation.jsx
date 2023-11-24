@@ -11,7 +11,7 @@ const RecipeCreation = () => {
     preparation_time: '',
   }
   return (
-    <div className="form-container">
+    <div className="main-container">
       <FormRecipe recipe={initialStateRecipe} isUpdate={false} />
     </div>
   )

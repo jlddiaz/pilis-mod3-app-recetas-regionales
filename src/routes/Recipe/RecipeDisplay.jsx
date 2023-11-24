@@ -10,19 +10,30 @@ const RecipeDisplay = () => {
   const [recipe] = recipes.filter((recipe) => recipe.id === id)
 
   return (
-    <div className="palette-display-container">
-      <div className="palette-display-card">
-        <h1 className="palette-display-name">{recipe.name}</h1>
-        <img src={Comida} alt="" className="img-recipe-display" />
-        <span>{recipe.description}</span>
-        <span>Ingredientes: {recipe.ingredients}</span>
-        <span>Preparación: </span>
-        <span>{recipe.preparation}</span>
-        <span>Tiempo de Preparación: {recipe.preparation_time}</span>
+    <div className="recipe-display-container">
+      <div className="recipe-display-card">
+        <h1 className="recipe-display-name">{recipe.name}</h1>
+        <div className="section-img">
+          <img src={Comida} alt="" className="img-recipe-display" />
+          <p>{recipe.description}</p>
+        </div>
+        <div className="section-body">
+          <p>
+            <b>Ingredientes:</b>
+          </p>
+          <p> {recipe.ingredients}</p>
+          <p>
+            <b>Preparación:</b>{' '}
+          </p>
+          <p>{recipe.preparation}</p>
+          <p>
+            <b>Tiempo de Preparación:</b> {recipe.preparation_time}hs
+          </p>
+        </div>
+        <Link className="btn-back" to="/">
+          Volver al Inicio
+        </Link>
       </div>
-      <Link className="btn-back" to="/">
-        Volver al Inicio
-      </Link>
     </div>
   )
 }

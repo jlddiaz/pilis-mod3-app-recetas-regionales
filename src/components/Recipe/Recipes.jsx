@@ -4,7 +4,7 @@ import './Recipes.css'
 const Recipes = ({ recipes }) => {
   
   return (
-    <div className='grid'>
+    <div className='container-recipes'>
       {recipes.map((recipe) => (
         <Recipe key={recipe.id} recipe={recipe} />
       ))}
