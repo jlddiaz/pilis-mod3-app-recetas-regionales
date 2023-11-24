@@ -30,10 +30,14 @@
     justify-content: center;
     gap: 20px;    
   }
+  .section-img img{
+    width: 35%;
+  }
   .section-img p{
     color: #B31312;
     font-size: 20px;
     font-weight: bold;
+    width: 55%;
   }
   .section-body {
     margin: 30px 20px;

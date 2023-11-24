@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Comida from '../../assets/comida.jpg'
 import './Recipe.css'
 const Recipe = ({ recipe }) => {
   const {
@@ -15,14 +14,14 @@ const Recipe = ({ recipe }) => {
   return (
     <div className="card-recipe">
       <div className="card-recipe-header">
-        <img src={Comida} alt="" />
+        <img src={image} alt="" />
         <h4>{name}</h4>
       </div>
       <div className="card-recipe-body">
-        <p>Descripción: {description}</p><br />
+        <p>{description}</p><br />
         {/* <p>Ingredientes: {ingredients}</p>
         <p>Preparación: {preparation}</p> */}
-        <p>Duración: {preparation_time}hs</p>
+        <p>Duración: {preparation_time}</p>
       </div>
 
       <div className="card-recipe-footer">

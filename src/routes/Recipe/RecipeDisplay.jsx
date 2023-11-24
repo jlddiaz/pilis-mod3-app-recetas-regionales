@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './RecipeDisplay.css'
-import Comida from '../../assets/comida.jpg'
 import { RecipeContext } from '../../context/RecipeContext'
 
 const RecipeDisplay = () => {
@@ -14,7 +13,7 @@ const RecipeDisplay = () => {
       <div className="recipe-display-card">
         <h1 className="recipe-display-name">{recipe.name}</h1>
         <div className="section-img">
-          <img src={Comida} alt="" className="img-recipe-display" />
+          <img src={recipe.image} alt="" className="img-recipe-display" />
           <p>{recipe.description}</p>
         </div>
         <div className="section-body">
@@ -27,7 +26,7 @@ const RecipeDisplay = () => {
           </p>
           <p>{recipe.preparation}</p>
           <p>
-            <b>Tiempo de Preparación:</b> {recipe.preparation_time}hs
+            <b>Tiempo de Preparación:</b> {recipe.preparation_time}
           </p>
         </div>
         <Link className="btn-back" to="/">
